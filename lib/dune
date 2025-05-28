@@ -1,0 +1,10 @@
+(library
+ (name mylib)
+ (modules utils petrinets)
+ (wrapped false))
+
+
+(env
+ (dev
+  (flags
+   (:standard -w -32 -w -33))))

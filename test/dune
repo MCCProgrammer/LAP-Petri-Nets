@@ -1,0 +1,21 @@
+(test
+ (name test_petrinets_p2)
+ (libraries ounit2 mylib)
+ (modules unit_tests_p2 test_petrinets_p2))
+
+(test
+ (name test_petrinets_p3)
+ (libraries ounit2 mylib)
+ (modules buildfire coffeemachine unit_tests_p3 test_petrinets_p3))
+
+(rule
+ (alias test_project_2)
+ (deps test_petrinets_p2.exe)
+ (action
+  (run ./test_petrinets_p2.exe)))
+
+(rule
+ (alias test_project_3)
+ (deps test_petrinets_p3.exe)
+ (action
+  (run ./test_petrinets_p3.exe)))
